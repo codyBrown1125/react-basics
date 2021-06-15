@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYYYLE</title>
+
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <!-- react dom -->
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- bable lib -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+<body>
+    <div id="app">React not rendered</div>
+
+    <script type="text/babel">
+        //CLASSES
+            //IF NEEDING "this" - USE es6 Classes
+
+        //create class component
+        // class Shape extends React.Component {
+        //     render () {
+        //         return(
+        //             <h1>Circle, Square, Rectangle</h1>
+        //         )
+        //     }
+        // }
+
+        class Circle extends React.Component {
+            render () {
+                var circleStyle = {
+                    width: 100,
+                    height: 100,
+                    background: "red",
+                    borderRadius: "50%"
+                }
+                return(
+                    <h1 style={circleStyle}>Circle</h1>
+                )
+            }
+        }
+        class Square extends React.Component {
+            render () {
+                var squareStyle = {
+                    width: 100,
+                    height: 100,
+                    background: "red"
+                }
+                return(
+                    <h1 style={squareStyle}>Square</h1>
+                )
+            }
+        }
+        class Rectangle extends React.Component {
+            render () {
+                var rectangleStyle = {
+                    width: 200,
+                    height: 100,
+                    background: "red"
+                }
+                return(
+                    <h1 style={rectangleStyle}>Rectangle</h1>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            //what, where
+            <div>
+                <Circle/>
+                <Square/>
+                <Rectangle/>
+            </div>,
+            document.getElementById("app")
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's React!</title>
+    <!-- react library -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <!-- react dom -->
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- bable lib -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <p>hi</p>
+<!-- designated location to insert react content -->
+<div id="app">React not yet rendered</div>
+<!-- javascript -->
+<script type="text/babel">
+    //RENDER MULTIPLE ELEMENTS
+
+    //render react to the dom - will accept 2 arguments (what, where) , uses jsx
+    ReactDOM.render(
+        //react WHAT - jsx
+        <div>
+            <h1>HelloWorld</h1>
+            <h2>I hope you have a great day!</h2>
+            <h3>third element</h3>
+        </div>,
+
+        //react HERE - div with id of app
+        document.getElementById("app")
+    );
+</script>
+</body>
+</html>

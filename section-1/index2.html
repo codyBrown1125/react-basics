@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's React!</title>
+    <!-- react library -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <!-- react dom -->
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- bable lib -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <p>hi</p>
+<!-- designated location to insert react content -->
+<div id="app">React not yet rendered</div>
+<div id="challenge1">not rendered with React</div>
+<div id="challenge2">not rendered with React 2</div>
+<div id="challenge3">not rendered with React 3</div>
+<!-- javascript -->
+<script type="text/babel">
+    //challeng 1: render a paragraph tag with the content "I am a paragraph!"
+    //challeng 2: render an anchor tag that links to google with the content "visit google"
+    //challeng 3: render an unordered list with three list items you need to do today
+
+
+    //render react to the dom - will accept 2 arguments (what, where) , uses jsx
+    ReactDOM.render(
+        //react WHAT - jsx
+        <p>I am a paragraph!</p>,
+        //react HERE - div with id of app
+        document.getElementById("challenge1")
+    );
+    ReactDOM.render(
+        //react WHAT - jsx
+        <a href="https://google.com">visit google</a>,
+        //react HERE - div with id of app
+        document.getElementById("challenge2")
+    );
+    ReactDOM.render(
+        //react WHAT - jsx
+        <ul>
+            <li>hide</li>
+            <li>go</li>
+            <li>seek!</li>
+            </ul>,
+        //react HERE - div with id of app
+        document.getElementById("challenge3")
+    );
+</script>
+</body>
+</html>

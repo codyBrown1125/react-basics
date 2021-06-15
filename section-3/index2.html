@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Component Inline</title>
+
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <!-- react dom -->
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- bable lib -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- link to css local -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="app">React not rendered</div>
+
+    <script type="text/babel">
+
+        //IN GENERAL, I DON'T REALLY LIKE PUTTING CSS PROPERTIES IN A REACT CLASS... it bugs me, its ok
+        // ex:
+            // var redStyle = {
+            //     height: 50px,
+            //     width: 150px,
+            //     backgroundColor: "red"
+            // }
+        // var ColorSpectrum = function() {
+        //     return(
+        //         <h1 className="red">Red, Orange, Yellow, Green, Blue, Indigo, Violet</h1>
+        //     )
+        // }
+
+        var Red = function() {
+            var redStyle = {
+                height: 50,
+                width: 150,
+                backgroundColor: "red"
+            }
+            return(
+                <h1 style={redStyle}>Red</h1>
+            )
+        }
+        var Orange = function() {
+            return(
+                <h1 className="orange">Orange</h1>
+            )
+        }
+        var Yellow = function() {
+            return(
+                <h1 className="yellow">Yellow</h1>
+            )
+        }
+        var Green = function() {
+            return(
+                <h1 className="green">Green</h1>
+            )
+        }
+        var Blue = function() {
+            return(
+                <h1 className="blue">Blue</h1>
+            )
+        }
+        var Violet = function() {
+            return(
+                <h1 className="violet">Violet</h1>
+            )
+        }
+        var Purple = function() {
+            return(
+                <h1 className="purple">Purple</h1>
+            )
+        }
+
+
+        
+        var destination = document.getElementById("app");
+
+        ReactDOM.render(
+            //var - jsx
+            <div>
+                <Red/>
+                <Orange/>
+                <Yellow/>
+                <Green/>
+                <Blue/>
+                <Violet/>
+                <Purple/>
+            </div>
+            ,
+            //where - id
+            destination
+        );
+    </script>
+</body>
+</html>

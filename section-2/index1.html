@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stateless Function Components</title>
+
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <!-- react dom -->
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- bable lib -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+<body>
+    <div id="app">React not rendered</div>
+
+    <script type="text/babel">
+        //OUR FIRST STATELESS FUNCTIONAL COMPONENT
+            //COMPONENT IS CAPITALIZED
+            //COMPONENT RETURNS ONE THING
+        var ColorSpectrum = function() {
+            return(
+                <h1>Red, Orange, Yellow, Green, Blue, Indigo, Violet</h1>
+            )
+        }
+        var destination = document.getElementById("app");
+
+        ReactDOM.render(
+            //var - jsx
+            <ColorSpectrum/>,
+            //where - id
+            destination
+        );
+    </script>
+</body>
+</html>
